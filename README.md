@@ -1,39 +1,31 @@
-# AmitSahu ERC-20 Token Contract
+# AmitSahu Token Contract
 
 ## Overview
 
-The `AmitSahu` contract is an ERC-20 token that extends the OpenZeppelin ERC20 and ERC20Burnable contracts. It allows for standard ERC-20 token operations, along with additional functionalities like minting and burning.
-
-## Token Information
-
-- **Name:** AmitSahu
-- **Symbol:** AMS
-- **Decimals:** 18
+AmitSahu is an ERC-20 token contract written in Solidity. This contract includes basic functionalities such as minting, burning, and transferring tokens.
 
 ## Features
 
-### Minting
+- **Name**: AmitSahu
+- **Symbol**: AMS
+- **Decimals**: 18
 
-The contract allows the owner to mint additional tokens.
+## Prerequisites
 
-- **Function:**
-  - `mint(address to, uint256 amount)`
+- Solidity ^0.8.20
+- OpenZeppelin Contracts
 
-### Burning
+## Contract Details
 
-Token holders can burn their own tokens.
+### Constructor
 
-- **Function:**
-  - `burn(address to, uint256 amount)`
+The constructor initializes the token with an initial supply of 1 token, minted to the initial owner address.
 
-### Initial Supply
+### Functions
 
-The contract is initialized with an initial supply of 1 AMS token, minted to the contract owner.
+- **mint**: Allows the owner to mint additional tokens and assign them to a specified address.
 
-## Deployment
+- **burn**: Allows any token holder to burn a certain amount of tokens from their balance.
 
-Upon deployment, the contract requires an initial owner address, who receives the initial supply of tokens.
+- **transfer**: Overrides the `transfer` function from the ERC20 contract to ensure standard token transfer functionality.
 
-## Dependencies
-
-The contract uses OpenZeppelin's ERC20 and ERC20Burnable contracts.
